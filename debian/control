@@ -1,0 +1,12 @@
+Source: libvmod-presslab
+Section: web
+Priority: extra
+Maintainer: Presslab <alexandre@presslab.com.br>
+Build-Depends: debhelper (>= 7), build-essential, python-docutils
+Standards-Version: 3.8.1
+Vcs-Git: git://github.com/varnish/libvmod-example.git
+
+Package: libvmod-presslab
+Architecture: any
+Depends: varnish, ${Varnish:ABI}, ${misc:Depends}
+Description: Libs and routines Presslab vmod for Varnish

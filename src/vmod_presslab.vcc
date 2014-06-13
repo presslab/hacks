@@ -1,0 +1,5 @@
+Module presslab
+Init init_function
+Function STRING hello(STRING)
+Function INT need_auth(STRING)
+
