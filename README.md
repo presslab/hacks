@@ -10,7 +10,7 @@ Installation requires the Varnish source tree (only the source matching the
 binary installation).
 
 1. `./autogen.sh`  (for git-installation)
-2. `./configure VARNISHSRC=/path/to/your/varnish/source/varnish-cache --prefix=/usr/lib64/varnish/vmods`
+2. `./configure VARNISHSRC=/path/to/your/varnish/source/varnish-cache`
 3. `make`
 4. `make install` (may require root: sudo make install)
 5. `make check` (Optional for regression tests)
