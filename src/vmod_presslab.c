@@ -39,3 +39,17 @@ vmod_need_auth(struct sess *sp, const char *name)
         return (stat(name, &buffer) == 0);
 }
 
+double
+vmod_get_max_age(struct sess *sp)
+{
+	char *ttl;
+	int ittl;
+
+	// first char in third param is length of header plus colon in octal
+	ttl = VRT_GetHdr(sp, HDR_BERESP, "\004ttl:");
+	ittl = atoi(ttl);
+        if (ittl <= -1)
+            ittl = 0;
+
+	return (ittl);
+}
